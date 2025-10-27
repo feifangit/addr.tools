@@ -5,7 +5,7 @@ graph LR
     subgraph Browser
         A[Load dnscheck.tools UI]
         B[Generate clientId]
-        C[Open WebSocket to /watch/<clientId>]
+        C["Open WebSocket to /watch/&lt;clientId&gt;"]
         D[Issue HTTPS fetches for test hostnames]
     end
 
@@ -25,7 +25,7 @@ graph LR
         I[Recursive resolver queries test zone]
         J[addrd ServeDNS receives query]
         K[Capture resolver IP, EDNS, TLS]
-        L[Send response (A/AAAA, REFUSED, DNSSEC variants)]
+        L["Send response (A/AAAA, REFUSED, DNSSEC variants)"]
     end
 
     subgraph Browser_UI
